@@ -1,0 +1,84 @@
+﻿<Window x:Class="HCI_PROJEKA_1.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    Title="Money smart" Height="600" Width="1000" Icon="/money-growth.png"
+    WindowStartupLocation="CenterScreen" ResizeMode="NoResize" >
+
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="333" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Column="0" Style="{DynamicResource background-left}" Margin="0,0,35,0">
+            <StackPanel VerticalAlignment="Stretch">
+                <TextBlock Text="MONEY" Style="{DynamicResource MoneyTextStyle}" Margin="20,30,0,10"/>
+                <TextBlock Text="SMART" Style="{DynamicResource SmartTextStyle}" Margin="65,-30,30,20"/>
+                
+                <Button Style="{DynamicResource MenuButton}" Name="btnDashboard" Margin="15,10,0,5" Click="DashboardButton_Click">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <materialDesign:PackIcon Style="{DynamicResource MenuIcon}" Kind="Home" />
+                        <TextBlock Text="{DynamicResource DashboardButtonText}" VerticalAlignment="Center" />
+                    </StackPanel>
+                </Button>
+
+                <Button Style="{DynamicResource MenuButton}" Name="btnRevenues" Margin="15,5,0,5" Click="RevenuesButton_Click">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <materialDesign:PackIcon Style="{DynamicResource MenuIcon}" Kind="CashPlus"/>
+                        <TextBlock Text="{DynamicResource RevenuesButtonText}" VerticalAlignment="Center" />
+                    </StackPanel>
+                </Button>
+
+                <Button Style="{DynamicResource MenuButton}" Margin="15,5,0,5" Click="SpendingButton_Click">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <materialDesign:PackIcon Style="{DynamicResource MenuIcon}" Kind="CashMultiple"/>
+                        <TextBlock Text="{DynamicResource SpendingButtonText}" VerticalAlignment="Center" />
+                    </StackPanel>
+                </Button>
+
+                <Button Style="{DynamicResource MenuButton}" Name="btnSavings" Margin="15,5,0,5" Click="SavingsButton_Click">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <materialDesign:PackIcon Style="{DynamicResource MenuIcon}" Kind="PiggyBank"/>
+                        <TextBlock Text="{DynamicResource SavingsButtonText}" VerticalAlignment="Center" />
+                    </StackPanel>
+                </Button>
+
+                <Button x:Name="btnGoals" Style="{DynamicResource MenuButton}" Margin="15,5,0,5" Click="GoalsButton_Click" Visibility="Collapsed">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <materialDesign:PackIcon Style="{DynamicResource MenuIcon}" Kind="FlagCheckered"/>
+                        <TextBlock Text="{DynamicResource GoalsButtonText}" VerticalAlignment="Center" />
+                    </StackPanel>
+                </Button>
+
+                <Button x:Name="btnAnalytics" Style="{DynamicResource MenuButton}" Margin="15,5,0,5" Click="AnalyticsButton_Click" Visibility="Collapsed">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <materialDesign:PackIcon Style="{DynamicResource MenuIcon}" Kind="Analytics"/>
+                        <TextBlock Text="{DynamicResource AnalyticsButtonText}" VerticalAlignment="Center" />
+                    </StackPanel>
+                </Button>
+
+
+                <Button Style="{DynamicResource MenuButton}" Name="btnSettings" Margin="15,25,0,5" Click="SettingsButton_Click">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <materialDesign:PackIcon Style="{DynamicResource MenuIcon}" Kind="Cog"/>
+                        <TextBlock Text="{DynamicResource SettingsButtonText}" VerticalAlignment="Center" />
+                    </StackPanel>
+                </Button>
+                
+                <Button Style="{DynamicResource MenuButton}" Margin="15,5,0,5" Click="LogoutButton_Click">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <materialDesign:PackIcon Style="{DynamicResource MenuIcon}" Kind="ExitToApp"/>
+                        <TextBlock Text="{DynamicResource LogoutButtonText}" VerticalAlignment="Center" />
+                    </StackPanel>
+                </Button>
+
+            </StackPanel>
+        </Border>
+
+        <Grid Style="{DynamicResource background-right}" Grid.ColumnSpan="2" Margin="298,0,0,0">
+            <ContentControl Name="MainContent" VerticalAlignment="Top" Margin="20" />
+        </Grid>
+    </Grid>
+</Window>

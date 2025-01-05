@@ -1,0 +1,116 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+ 
+    <system:String x:Key="MoneyTitle">MONEY</system:String>
+    <system:String x:Key="SmartTitle">SMART</system:String>
+    <system:String x:Key="DashboardButtonText">Dashboard</system:String>
+    <system:String x:Key="RevenuesButtonText">Revenues</system:String>
+    <system:String x:Key="SpendingButtonText">Spending</system:String>
+    <system:String x:Key="SavingsButtonText">Savings</system:String>
+    <system:String x:Key="SettingsButtonText">Settings</system:String>
+    <system:String x:Key="LogoutButtonText">Logout</system:String>
+    <system:String x:Key="GoalsButtonText">Goals</system:String>
+    <system:String x:Key="AnalyticsButtonText">Analytics</system:String>
+    <system:String x:Key="BalanceTitle">BALANCE</system:String>
+    <system:String x:Key="CashLabel">CASH:</system:String>
+    <system:String x:Key="CreditLabel">CREDIT CARD:</system:String>
+    <system:String x:Key="SpendingDistributionTitle">SPENDING DISTRIBUTION</system:String>
+    <system:String x:Key="MonthlyIncomeDistributionTitle">MONTHLY INCOME DISTRIBUTION</system:String>
+    <system:String x:Key="SavingsProgressionTitle">SAVINGS PROGRESSION</system:String>
+    <system:String x:Key="Goal1Label">Goal 1: Vacation Fund</system:String>
+    <system:String x:Key="Goal2Label">Goal 2: Emergency Fund</system:String>
+    <system:String x:Key="Goal3Label">Goal 3: Car Fund</system:String>
+    <system:String x:Key="Goal4Label">Goal 4: House Down Payment</system:String>
+    <system:String x:Key="pieItem1">Food</system:String>
+    <system:String x:Key="pieItem2">Rent and utilities</system:String>
+    <system:String x:Key="pieItem3">Gifts</system:String>
+    <system:String x:Key="pieItem4">Entertainment</system:String>
+    <system:String x:Key="pieItem5">Transportation</system:String>
+    <system:String x:Key="pieItem6">Shopping</system:String>
+    <system:String x:Key="pieItem7">Miscellaneous</system:String>
+    <system:String x:Key="revenueName">Revenue name</system:String>
+    <system:String x:Key="revenueType">Revenue freq.</system:String>
+    <system:String x:Key="revenueValue">Revenue value</system:String>
+    <system:String x:Key="revenueMode">Way of revenue</system:String>
+    <system:String x:Key="annual">Annual</system:String>
+    <system:String x:Key="monthly">Monthly</system:String>
+    <system:String x:Key="oneTime">One-Time</system:String>
+    <system:String x:Key="cash">Cash</system:String>
+    <system:String x:Key="credit">Credit card</system:String>
+    <system:String x:Key="addRevenueButton">Add revenue</system:String>
+    <system:String x:Key="listRevenues">List of all revenues:</system:String>
+    <system:String x:Key="spendingName">Spending name</system:String>
+    <system:String x:Key="spendingCategory">Spending category</system:String>
+    <system:String x:Key="spendingValue">Spending value</system:String>
+    <system:String x:Key="addSpendingButton">Add spending</system:String>
+    <system:String x:Key="listSpendings">List of all spendings:</system:String>
+    <system:String x:Key="changeSettings">Change settings</system:String>
+    <system:String x:Key="applyLanguageButton">Apply language</system:String>
+    <system:String x:Key="applyThemeButton">Apply theme</system:String>
+    <system:String x:Key="light">Light</system:String>
+    <system:String x:Key="dark">Dark</system:String>
+    <system:String x:Key="custom">Default</system:String>
+    <system:String x:Key="english">English</system:String>
+    <system:String x:Key="serbian">Serbian</system:String>
+    <system:String x:Key="chartMoney">Money</system:String>
+    <system:String x:Key="chartCredit">Card</system:String>
+    <system:String x:Key="chartMonth">Month</system:String>
+    <x:Array x:Key="chartLabels" Type="{x:Type system:String}">
+        <system:String>Jan</system:String>
+        <system:String>Feb</system:String>
+        <system:String>Mar</system:String>
+        <system:String>Apr</system:String>
+        <system:String>May</system:String>
+        <system:String>Jun</system:String>
+        <system:String>Jul</system:String>
+        <system:String>Aug</system:String>
+        <system:String>Sep</system:String>
+        <system:String>Oct</system:String>
+        <system:String>Nov</system:String>
+        <system:String>Dec</system:String>
+    </x:Array>
+    <system:String x:Key="chartIncome">Income</system:String>
+    <system:String x:Key="save">Save</system:String>
+    <system:String x:Key="savingsName">Saving name</system:String>
+    <system:String x:Key="savingsGoal">Saving goal</system:String>
+    <system:String x:Key="savingsDeposit">Deposit</system:String>
+    <system:String x:Key="addSavings">Add saving</system:String>
+    <system:String x:Key="listSavings">List of all savings:</system:String>
+    <system:String x:Key="RegisterText">Register</system:String>
+    <system:String x:Key="UsernameText">Username</system:String>
+    <system:String x:Key="PasswordText">Password</system:String>
+    <system:String x:Key="ConfirmPasswordText">Confirm Password</system:String>
+    <system:String x:Key="RegisterButtonContent">Register</system:String>
+    <system:String x:Key="LoginText2">Already have an account? Login</system:String>
+    <system:String x:Key="LoginText">Login</system:String>
+    <system:String x:Key="LoginButtonContent">Login</system:String>
+    <system:String x:Key="SignUpText">Don't have an account? Sign up</system:String>
+    <system:String x:Key="goalName">Goal name</system:String>
+    <system:String x:Key="goalValue">Goal value</system:String>
+    <system:String x:Key="instalments">Instalments</system:String>
+    <system:String x:Key="addGoal">Add goal</system:String>
+    <system:String x:Key="listGoals">List of all goals:</system:String>
+    <system:String x:Key="analyticsText1">According to economy standards and suggestions,</system:String>
+    <system:String x:Key="analyticsText2">we have analyzed your spending and here is what we found out</system:String>
+    <system:String x:Key="analyticsText3">% of your income you spent on</system:String>
+    <system:String x:Key="analyticsText4">, which is not within suggestions, try spendings less</system:String>
+    <system:String x:Key="analyticsText5">, which is within suggestions, keep it up</system:String>
+    <system:String x:Key="analyticsText6">Create your financial report</system:String>
+    <system:String x:Key="analyticsText7">Last month</system:String>
+    <system:String x:Key="analyticsText8">Last 6 months</system:String>
+    <system:String x:Key="analyticsText9">Last year</system:String>
+    <system:String x:Key="analyticsText10">Create</system:String>
+    <system:String x:Key="settingsText1">Enter code</system:String>
+    <system:String x:Key="settingsText2">Unlock expert mode</system:String>
+    <system:String x:Key="spendingMode">Way of payment</system:String>
+    <system:String x:Key="spendingMode1">Way</system:String>
+    <system:String x:Key="spendingType1">Category</system:String>
+    <system:String x:Key="spendingValue1">Value</system:String>
+    <system:String x:Key="savingsDeposited">Deposited</system:String>
+    <system:String x:Key="doable">Doable</system:String>
+    <system:String x:Key="reportID">Seq.n.</system:String>
+    <system:String x:Key="reportName">Name</system:String>
+    
+    
+</ResourceDictionary>

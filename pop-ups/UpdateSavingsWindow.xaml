@@ -1,0 +1,21 @@
+﻿<Window x:Class="HCI_PROJEKA_1.UpdateSavingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HCI_PROJEKA_1"
+        mc:Ignorable="d"
+        Title="UpdateSavingsWindow" Height="250" Width="400" ResizeMode="NoResize"   WindowStartupLocation="CenterScreen">
+
+    <Grid Margin="10" Style="{DynamicResource popUpBackground}">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Style="{DynamicResource DefaultBoldTextSmall}" Text="{DynamicResource savingsDeposit}" Margin="5"/>
+        <TextBox Style="{DynamicResource DefaultTextBox}" x:Name="SavingsDepositTextBox" Grid.Row="0" Margin="120,5,0,5" HorizontalAlignment="Left"/>
+        <Button Style="{DynamicResource DefaultButton}" Content="{DynamicResource save}" Grid.Row="1" Click="SaveButton_Click"/>
+    </Grid>
+</Window>

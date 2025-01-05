@@ -1,0 +1,107 @@
+﻿<UserControl x:Class="HCI_PROJEKA_1.AnalyticsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:HCI_PROJEKA_1" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d"
+             d:DesignHeight="650" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+    
+        <StackPanel Grid.Row="0" Margin="10,20,20,10">
+            <TextBlock Style="{DynamicResource DashboardTitles}" Margin="0,0,0,20" TextWrapping="Wrap">
+                <Run Text="{DynamicResource analyticsText1}"/><LineBreak/>
+                <Run Text="{DynamicResource analyticsText2}"/>
+            </TextBlock>
+
+            <StackPanel>
+             
+                <TextBlock Style="{DynamicResource DefaultBoldTextSmall}" Margin="0,5">
+                    <Run Text="{Binding FoodPercentage, Mode=OneWay}"/>
+                    <Run Text="{DynamicResource analyticsText3}"/>
+                    <Run FontWeight="ExtraBlack" FontStyle="Italic" Text="{DynamicResource pieItem1}"/>
+                    <Run Text="{Binding FoodAnalyticsText, Mode=OneWay}"/>
+                </TextBlock>
+
+                <TextBlock Style="{DynamicResource DefaultBoldTextSmall}" Margin="0,5">
+                    <Run Text="{Binding RentPercentage, Mode=OneWay}"/>
+                    <Run Text="{DynamicResource analyticsText3}"/>
+                    <Run FontWeight="ExtraBlack" FontStyle="Italic" Text="{DynamicResource pieItem2}"/>
+                    <Run Text="{Binding RentAnalyticsText, Mode=OneWay}"/>
+                </TextBlock>
+
+                <TextBlock Style="{DynamicResource DefaultBoldTextSmall}" Margin="0,5">
+                    <Run Text="{Binding GiftsPercentage, Mode=OneWay}"/>
+                    <Run Text="{DynamicResource analyticsText3}"/>
+                    <Run FontWeight="ExtraBlack" FontStyle="Italic" Text="{DynamicResource pieItem3}"/>
+                    <Run Text="{Binding GiftsAnalyticsText, Mode=OneWay}"/>
+                </TextBlock>
+
+                <TextBlock Style="{DynamicResource DefaultBoldTextSmall}" Margin="0,5">
+                    <Run Text="{Binding EntertainmentPercentage, Mode=OneWay}"/>
+                    <Run Text="{DynamicResource analyticsText3}"/>
+                    <Run FontWeight="ExtraBlack" FontStyle="Italic" Text="{DynamicResource pieItem4}"/>
+                    <Run Text="{Binding EntertainmentAnalyticsText, Mode=OneWay}"/>
+                </TextBlock>
+
+                <TextBlock Style="{DynamicResource DefaultBoldTextSmall}" Margin="0,5">
+                    <Run Text="{Binding TransportationPercentage, Mode=OneWay}"/>
+                    <Run Text="{DynamicResource analyticsText3}"/>
+                    <Run FontWeight="ExtraBlack" FontStyle="Italic" Text="{DynamicResource pieItem5}"/>
+                    <Run Text="{Binding TransportationAnalyticsText, Mode=OneWay}"/>
+                </TextBlock>
+
+                <TextBlock Style="{DynamicResource DefaultBoldTextSmall}" Margin="0,5">
+                    <Run Text="{Binding ShoppingPercentage, Mode=OneWay}"/>
+                    <Run Text="{DynamicResource analyticsText3}"/>
+                    <Run FontWeight="ExtraBlack" FontStyle="Italic" Text="{DynamicResource pieItem6}"/>
+                    <Run Text="{Binding ShoppingAnalyticsText, Mode=OneWay}"/>
+                </TextBlock>
+
+                <TextBlock Style="{DynamicResource DefaultBoldTextSmall}" Margin="0,5">
+                    <Run Text="{Binding MiscellaneousPercentage, Mode=OneWay }"/>
+                    <Run Text="{DynamicResource analyticsText3}"/>
+                    <Run FontWeight="ExtraBlack" FontStyle="Italic" Text="{DynamicResource pieItem7}"/>
+                    <Run Text="{Binding MiscellaneousAnalyticsText, Mode=OneWay}"/>
+                </TextBlock>
+            </StackPanel>
+        </StackPanel>
+
+        <Grid Grid.Row="1" Margin="10,20,200,10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Style="{DynamicResource DashboardTitles}" Text="{DynamicResource analyticsText6}" Margin="0,5,10,10"/>
+
+            <ComboBox Style="{DynamicResource DefaultComboBox}" Grid.Row="0" Margin="0,44,0,0" VerticalAlignment="Top">
+                <ComboBoxItem Content= "{DynamicResource analyticsText7}"/>
+                <ComboBoxItem Content= "{DynamicResource analyticsText8}"/>
+                <ComboBoxItem Content= "{DynamicResource analyticsText9}"/>
+            </ComboBox>
+
+      
+            <Button Style="{DynamicResource DefaultButton}" Content="{DynamicResource analyticsText10}" Margin="213,0,0,0" HorizontalAlignment="Left" Grid.Row="0" VerticalAlignment="Bottom" Click="GenerateReportButton_Click"/>
+
+
+            <TextBlock Style="{DynamicResource DefaultListText}" Text="{DynamicResource reportName}" Width="100" Margin="10,10,0,0" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" />
+            <ListBox x:Name="SpendingsListBox" Margin="0,105,10,0" VerticalAlignment="Top" Height="Auto" ItemsSource="{Binding Reports}" Grid.RowSpan="2">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal" MouseLeftButtonDown="StackPanel_Click">
+                            <TextBlock Style="{DynamicResource DefaultListText}" Text="{Binding ReportName}" Width="200" Margin="10,0,0,0" />
+                            <Button Style="{DynamicResource DefaultButtonSmall}" Margin="130,0,0,0" Click="DeleteReportButton_Click" />
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+
+        </Grid>
+    </Grid>
+</UserControl>

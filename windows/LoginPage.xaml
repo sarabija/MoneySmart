@@ -1,0 +1,31 @@
+﻿<Window x:Class="HCI_PROJEKA_1.LoginPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:HCI_PROJEKA_1"
+        Height="350" Width="400" Icon="/money-growth.png"
+        WindowStartupLocation="CenterScreen" Title="Money smart" ResizeMode="NoResize" 
+          DataContext="{Binding RelativeSource={RelativeSource Self}}">
+
+    <Grid Style="{DynamicResource background-right}">
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock Style="{DynamicResource bigLogin}" Text="{DynamicResource LoginText}"/>
+
+            <Grid>
+                <TextBox Name="UsernameTextBox" Width="250" Margin="0,0,0,15"
+                         Text="{Binding Username, UpdateSourceTrigger=PropertyChanged}"  GotFocus="UsernameTextBox_GotFocus" LostFocus="UsernameTextBox_LostFocus"/>
+                <TextBlock Style="{DynamicResource loginStyle}" Name="UsernamePlaceholder" Text="{DynamicResource UsernameText}"/>
+            </Grid>
+
+            <Grid>
+                <PasswordBox Name="PasswordBox" Width="250" Margin="0,0,0,15"
+                             PasswordChanged="PasswordBox_PasswordChanged"  GotFocus="PasswordBox_GotFocus" LostFocus="PasswordBox_LostFocus"/>
+                <TextBlock Style="{DynamicResource loginStyle}" Name="PasswordPlaceholder" Text="{DynamicResource PasswordText}"/>
+            </Grid>
+
+            <Button Style="{DynamicResource DefaultButton}" Content="{DynamicResource LoginButtonContent}"
+                    Command="{Binding LoginCommand}" CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=Window}}"/>
+
+            <TextBlock Style="{DynamicResource blue}" Text="{DynamicResource SignUpText}" MouseLeftButtonUp="SignUpTextBlock_MouseLeftButtonUp"/>
+        </StackPanel>
+    </Grid>
+</Window>

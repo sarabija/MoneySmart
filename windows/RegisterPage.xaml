@@ -1,0 +1,49 @@
+﻿<Window x:Class="HCI_PROJEKA_1.RegisterPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Money smart" Height="350" Width="400" Icon="/money-growth.png"
+        WindowStartupLocation="CenterScreen"
+        DataContext="{Binding RelativeSource={RelativeSource Self}}" ResizeMode="NoResize" >
+
+
+    <Grid Style="{DynamicResource background-right}">
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock Style="{DynamicResource bigLogin}" Text="{DynamicResource RegisterText}" />
+
+            <Grid>
+                <TextBox Name="UsernameTextBox" Width="250" Margin="0,0,0,15" 
+                         Text="{Binding Username, UpdateSourceTrigger=PropertyChanged}" 
+                         GotFocus="UsernameTextBox_GotFocus" LostFocus="UsernameTextBox_LostFocus"/>
+                <TextBlock x:Name="UsernamePlaceholder" Style="{DynamicResource loginStyle}" Text="{DynamicResource UsernameText}"/>
+            </Grid>
+
+            <Grid>
+                <PasswordBox Name="PasswordBox" 
+             Width="250" 
+             Margin="0,10,0,15" 
+             GotFocus="PasswordBox_GotFocus" 
+             LostFocus="PasswordBox_LostFocus" 
+             PasswordChanged="PasswordBox_PasswordChanged" />
+
+                <TextBlock x:Name="PasswordPlaceholder" Style="{DynamicResource loginStyle}" Text="{DynamicResource PasswordText}"/>
+            </Grid>
+
+            <Grid>
+                <PasswordBox Name="ConfirmPasswordBox"
+             Width="250"
+             Margin="0,10,0,15"
+             GotFocus="ConfirmPasswordBox_GotFocus"
+             LostFocus="ConfirmPasswordBox_LostFocus"
+             PasswordChanged="ConfirmPasswordBox_PasswordChanged" />
+
+                <TextBlock x:Name="ConfirmPasswordPlaceholder" Style="{DynamicResource loginStyle}" Text="{DynamicResource ConfirmPasswordText}"/>
+            </Grid>
+
+            <Button Style="{DynamicResource DefaultButton}" Content="{DynamicResource RegisterButtonContent}" 
+                    Command="{Binding RegisterCommand}"/>
+
+            <TextBlock Style="{DynamicResource blue}" Text="{DynamicResource LoginText2}" 
+                       MouseLeftButtonUp="LoginTextBlock_MouseLeftButtonUp"/>
+        </StackPanel>
+    </Grid>
+</Window>

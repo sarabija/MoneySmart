@@ -1,0 +1,116 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+
+    <system:String x:Key="MoneyTitle">NOVAC</system:String>
+    <system:String x:Key="SmartTitle">PAMETNO</system:String>
+    <system:String x:Key="DashboardButtonText">Početna</system:String>
+    <system:String x:Key="RevenuesButtonText">Prihodi</system:String>
+    <system:String x:Key="SpendingButtonText">Izdatci</system:String>
+    <system:String x:Key="SavingsButtonText">Štednja</system:String>
+    <system:String x:Key="SettingsButtonText">Postavke</system:String>
+    <system:String x:Key="LogoutButtonText">Odjava</system:String>
+    <system:String x:Key="GoalsButtonText">Ciljevi</system:String>
+    <system:String x:Key="AnalyticsButtonText">Analitika</system:String>
+    <system:String x:Key="BalanceTitle">STANJE</system:String>
+    <system:String x:Key="CashLabel">GOTOVINA:</system:String>
+    <system:String x:Key="CreditLabel">KARTICA:</system:String>
+    <system:String x:Key="SpendingDistributionTitle">RASPODJELA TROŠKOVA</system:String>
+    <system:String x:Key="MonthlyIncomeDistributionTitle">MESEČNA RASPODELA PRIHODA</system:String>
+    <system:String x:Key="SavingsProgressionTitle">NAPREDAK ŠTEDNJE</system:String>
+    <system:String x:Key="Goal1Label">Cilj 1: Fond za odmor</system:String>
+    <system:String x:Key="Goal2Label">Cilj 2: Fond za hitne slučajeve</system:String>
+    <system:String x:Key="Goal3Label">Cilj 3: Fond za automobil</system:String>
+    <system:String x:Key="Goal4Label">Cilj 4: Kapara za kuću</system:String>
+    <system:String x:Key="pieItem1">Hrana</system:String>
+    <system:String x:Key="pieItem2">Kirija i računi</system:String>
+    <system:String x:Key="pieItem3">Pokloni</system:String>
+    <system:String x:Key="pieItem4">Zabava</system:String>
+    <system:String x:Key="pieItem5">Prevoz</system:String>
+    <system:String x:Key="pieItem6">Kupovina</system:String>
+    <system:String x:Key="pieItem7">Razno</system:String>
+    <system:String x:Key="revenueName">Naziv prihoda</system:String>
+    <system:String x:Key="revenueType">Tip prihoda</system:String>
+    <system:String x:Key="revenueValue">Vrednost prihoda</system:String>
+    <system:String x:Key="revenueMode">Način prihoda</system:String>
+    <system:String x:Key="annual">Godišnji</system:String>
+    <system:String x:Key="monthly">Mesečni</system:String>
+    <system:String x:Key="oneTime">Jednokratni</system:String>
+    <system:String x:Key="cash">Gotovina</system:String>
+    <system:String x:Key="credit">Kartica</system:String>
+    <system:String x:Key="addRevenueButton">Dodaj prihod</system:String>
+    <system:String x:Key="listRevenues">Lista svih prihoda:</system:String>
+    <system:String x:Key="spendingName">Naziv troška</system:String>
+    <system:String x:Key="spendingCategory">Kategorija troška</system:String>
+    <system:String x:Key="spendingValue">Vrednost troška</system:String>
+    <system:String x:Key="addSpendingButton">Dodaj trošak</system:String>
+    <system:String x:Key="listSpendings">Lista svih troškova:</system:String>
+    <system:String x:Key="changeSettings">Promeni podešavanja</system:String>
+    <system:String x:Key="applyLanguageButton">Primeni jezik</system:String>
+    <system:String x:Key="applyThemeButton">Primeni temu</system:String>
+    <system:String x:Key="light">Svijetlo</system:String>
+    <system:String x:Key="dark">Tamno</system:String>
+    <system:String x:Key="custom">Podrazumijevano</system:String>
+    <system:String x:Key="english">Engleski</system:String>
+    <system:String x:Key="serbian">Srpski</system:String>
+    <system:String x:Key="chartMoney">Novac</system:String>
+    <system:String x:Key="chartCredit">Kartica</system:String>
+    <system:String x:Key="chartMonth">Mjesec</system:String>
+    <x:Array x:Key="chartLabels" Type="{x:Type system:String}">
+        <system:String>Jan</system:String>
+        <system:String>Feb</system:String>
+        <system:String>Mar</system:String>
+        <system:String>Apr</system:String>
+        <system:String>Maj</system:String>
+        <system:String>Jun</system:String>
+        <system:String>Jul</system:String>
+        <system:String>Aug</system:String>
+        <system:String>Sep</system:String>
+        <system:String>Okt</system:String>
+        <system:String>Nov</system:String>
+        <system:String>Dec</system:String>
+    </x:Array>
+    <system:String x:Key="chartIncome">Prihod</system:String>
+    <system:String x:Key="Save">Sačuvaj</system:String>
+    <system:String x:Key="savingsName">Naziv štednje</system:String>
+    <system:String x:Key="savingsGoal">Cilj štednje</system:String>
+    <system:String x:Key="savingsDeposit">Depozit</system:String>
+    <system:String x:Key="addSavings">Dodaj štednju</system:String>
+    <system:String x:Key="listSavings">Lista svih štednji:</system:String>
+    <system:String x:Key="RegisterText">Registracija</system:String>
+    <system:String x:Key="UsernameText">Korisničko ime</system:String>
+    <system:String x:Key="PasswordText">Lozinka</system:String>
+    <system:String x:Key="ConfirmPasswordText">Potvrdi lozinku</system:String>
+    <system:String x:Key="RegisterButtonContent">Registruj se</system:String>
+    <system:String x:Key="LoginText2">Već imate nalog? Prijavite se</system:String>
+    <system:String x:Key="LoginText">Prijava</system:String>
+    <system:String x:Key="LoginButtonContent">Prijavite se</system:String>
+    <system:String x:Key="SignUpText">Nemate nalog? Registrujte se</system:String>
+    <system:String x:Key="goalName">Naziv cilja</system:String>
+    <system:String x:Key="goalValue">Vrednost cilja</system:String>
+    <system:String x:Key="instalments">Broj rata</system:String>
+    <system:String x:Key="addGoal">Dodaj cilj</system:String>
+    <system:String x:Key="listGoals">Lista svih ciljeva:</system:String>
+    <system:String x:Key="analyticsText1">Prema ekonomskim standardima i preporukama,</system:String>
+    <system:String x:Key="analyticsText2">analizirali smo vašu potrošnju i evo šta smo otkrili</system:String>
+    <system:String x:Key="analyticsText3">% vaših prihod potrošili ste na</system:String>
+    <system:String x:Key="analyticsText4">, što nije unutar preporuka, probajte trošiti manje</system:String>
+    <system:String x:Key="analyticsText5">, što je po preporukama, nastavite tako</system:String>
+    <system:String x:Key="analyticsText6">Kreirajte svoj finansijski izvještaj</system:String>
+    <system:String x:Key="analyticsText7">Poslednji mjesec</system:String>
+    <system:String x:Key="analyticsText8">Poslednjih pola godine</system:String>
+    <system:String x:Key="analyticsText9">Poslednje godine</system:String>
+    <system:String x:Key="analyticsText10">Kreiraj</system:String>
+    <system:String x:Key="settingsText1">Unesite kod</system:String>
+    <system:String x:Key="settingsText2">Otključaj ekspertni mod</system:String>
+    <system:String x:Key="spendingMode">Način plaćanja</system:String>
+    <system:String x:Key="spendingMode1">Način</system:String>
+    <system:String x:Key="spendingType1">Kategorija</system:String>
+    <system:String x:Key="spendingValue1">Vrijednost</system:String>
+    <system:String x:Key="savingsDeposited">Depozitovano</system:String>
+    <system:String x:Key="doable">Izvodljivo</system:String>
+    <system:String x:Key="reportID">R.b.</system:String>
+    <system:String x:Key="reportName">Naziv</system:String>
+    
+    
+</ResourceDictionary>

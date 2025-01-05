@@ -1,0 +1,39 @@
+﻿<Window x:Class="HCI_PROJEKA_1.UpdateRevenueWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Update Revenue" Height="300" Width="400" ResizeMode="NoResize"   WindowStartupLocation="CenterScreen">
+    <Grid Margin="10" Style="{DynamicResource popUpBackground}" >
+       
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/> 
+            <RowDefinition Height="Auto"/> 
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>  
+        </Grid.RowDefinitions>
+        
+   
+        <TextBlock Style="{DynamicResource DefaultBoldTextSmall}" Text="{DynamicResource revenueName}" Margin="5"/>
+        <TextBox Style="{DynamicResource DefaultTextBox}" x:Name="RevenueNameTextBox" Grid.Row="0" Margin="120,5,0,5" HorizontalAlignment="Left"/>
+        
+        <TextBlock Style="{DynamicResource DefaultBoldTextSmall}" Text="{DynamicResource revenueValue}" Grid.Row="1" Margin="5"/>
+        <TextBox Style="{DynamicResource DefaultTextBox}" x:Name="RevenueValueTextBox" Grid.Row="1" Margin="120,5,0,5" HorizontalAlignment="Left"/>
+        
+
+        <TextBlock Style="{DynamicResource DefaultBoldTextSmall}" Text="{DynamicResource revenueType}" Grid.Row="2" Margin="5"/>
+        <ComboBox Style="{DynamicResource DefaultComboBox}" x:Name="RevenueTypeComboBox" Grid.Row="2" Margin="120,5,0,5" HorizontalAlignment="Left">
+        <ComboBoxItem Content="{DynamicResource annual}"/>
+        <ComboBoxItem Content="{DynamicResource monthly}"/>
+        <ComboBoxItem Content="{DynamicResource oneTime}"/>
+        </ComboBox>
+
+        <TextBlock Style="{DynamicResource DefaultBoldTextSmall}" Text="{DynamicResource revenueMode}" Grid.Row="3" Margin="5"/>
+        <ComboBox Style="{DynamicResource DefaultComboBox}"  x:Name="RevenueModeComboBox" Grid.Row="3" Margin="120,5,0,5" HorizontalAlignment="Left">
+            <ComboBoxItem Content="{DynamicResource cash}"/>
+            <ComboBoxItem Content="{DynamicResource credit}"/>
+        </ComboBox>
+        
+  
+        <Button Style="{DynamicResource DefaultButton}" Content="{DynamicResource save}" Grid.Row="4" Click="SaveButton_Click"/>
+    </Grid>
+</Window>

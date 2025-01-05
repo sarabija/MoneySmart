@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="HCI_PROJEKA_1.SettingsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             Height="407" Width="602">
+    <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,10,0,0" Width="575">
+        <TextBlock Style="{DynamicResource SettingsTitle}" Text="{DynamicResource changeSettings}"/>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,0" Width="575">
+            <ComboBox Style="{DynamicResource DefaultComboBox}" x:Name="LanguageComboBox" Margin="5">
+                <ComboBoxItem Content="{DynamicResource english}"/>
+                <ComboBoxItem Content="{DynamicResource serbian}"/>
+            </ComboBox>
+            <Button Style="{DynamicResource DefaultButton}" Content="{DynamicResource applyLanguageButton}" Click="ApplyLanguageButton_Click"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,0" Width="575">
+            <ComboBox Style="{DynamicResource DefaultComboBox}" x:Name="ThemeComboBox" Margin="5">
+                <ComboBoxItem Content="{DynamicResource light}"/>
+                <ComboBoxItem Content="{DynamicResource dark}"/>
+                <ComboBoxItem Content="{DynamicResource custom}"/>
+            </ComboBox>
+            <Button Style="{DynamicResource DefaultButton}" Content="{DynamicResource applyThemeButton}" Click="ApplyThemeButton_Click"/>
+        </StackPanel>
+
+  <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,0" Width="575">
+            <TextBox x:Name="CodeTextBox" 
+         Style="{DynamicResource DefaultTextBox}" 
+         Width="200" 
+         Margin="5" 
+         Foreground="Gray" 
+         GotFocus="CodeTextBox_GotFocus" 
+         LostFocus="CodeTextBox_LostFocus">
+        
+            </TextBox>
+
+            <Button x:Name="expert" Style="{DynamicResource DefaultButton}" Content="{DynamicResource settingsText2}" Click="UnlockExpertButton_Click"/>
+</StackPanel>
+
+    </StackPanel>
+    
+    
+    
+</UserControl>

@@ -1,0 +1,94 @@
+﻿<UserControl x:Class="HCI_PROJEKA_1.SpendingView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:HCI_PROJEKA_1"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" d:DesignWidth="800" Height="555">
+
+    <Grid Margin="0,0,10,0">
+
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,20,10,0" Height="122" Width="200">
+
+            <TextBlock Style="{DynamicResource DefaultBoldTextSmall}" Text="{DynamicResource spendingName}"/>
+            <TextBox Style="{DynamicResource DefaultTextBox}" x:Name="SpendingNameTextBox" Margin="0,0,0,10"/>
+
+            <TextBlock Style="{DynamicResource DefaultBoldTextSmall}" Text="{DynamicResource spendingCategory}"/>
+            <ComboBox Style="{DynamicResource DefaultComboBox}" x:Name="SpendingCategoryComboBox" Margin="0,0,0,10">
+                <ComboBoxItem Content="{DynamicResource pieItem1}" />
+                <ComboBoxItem Content="{DynamicResource pieItem2}" />
+                <ComboBoxItem Content="{DynamicResource pieItem3}" />
+                <ComboBoxItem Content="{DynamicResource pieItem4}" />
+                <ComboBoxItem Content="{DynamicResource pieItem5}" />
+                <ComboBoxItem Content="{DynamicResource pieItem6}" />
+                <ComboBoxItem Content="{DynamicResource pieItem7}" />
+            </ComboBox>
+
+        </StackPanel>
+
+
+
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="100,20,10,0" Grid.Column="2" Height="122" Width="200">
+
+            <TextBlock Style="{DynamicResource DefaultBoldTextSmall}" Text="{DynamicResource spendingValue}"/>
+            <TextBox Style="{DynamicResource DefaultTextBox}" x:Name="SpendingValueTextBox" Margin="0,0,0,10"/>
+
+            <TextBlock Style="{DynamicResource DefaultBoldTextSmall}" Text="{DynamicResource spendingMode}"/>
+            <ComboBox Style="{DynamicResource DefaultComboBox}" x:Name="SpendingModeComboBox" Margin="0,0,0,10">
+                <ComboBoxItem Content="{DynamicResource cash}"/>
+                <ComboBoxItem Content="{DynamicResource credit}"/>
+            </ComboBox>
+
+        </StackPanel>
+
+        <Button Style="{DynamicResource DefaultButton}" Content="{DynamicResource addSpendingButton}"  Margin="10,145,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="AddSpendingButton_Click" />
+
+        <TextBlock Style="{DynamicResource DefaultBoldTextMedium}"  Text="{DynamicResource listSpendings}"/>
+
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Style="{DynamicResource DefaultListText}" Text="{DynamicResource spendingName}" Width="150" Margin="15,-100,0,0" />
+            <TextBlock Style="{DynamicResource DefaultListText}" Text="{DynamicResource spendingValue1}" Width="100" Margin="10,-100,0,0" />
+            <TextBlock Style="{DynamicResource DefaultListText}" Text="{DynamicResource spendingType1}" Width="100" Margin="10,-100,0,0" />
+            <TextBlock Style="{DynamicResource DefaultListText}" Text="{DynamicResource spendingMode1}" Width="100" Margin="10,-100,0,0" />
+        </StackPanel>
+
+        <ListBox x:Name="SpendingsListBox" Margin="10,225,10,0" VerticalAlignment="Top" Height="225" ItemsSource="{Binding Spendings}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Style="{DynamicResource DefaultListText}" Text="{Binding SpendingName}" Width="150" Margin="0,0,0,0" />
+                        <TextBlock Style="{DynamicResource DefaultListText}" Text="{Binding SpendingValue}" Width="100" Margin="10,0,0,0" />
+                        <TextBlock Style="{DynamicResource DefaultListText}" Text="{Binding SpendingCategory}" Width="100" Margin="10,0,0,0" />
+                        <TextBlock Style="{DynamicResource DefaultListText}" Text="{Binding SpendingType}" Width="70" Margin="10,0,0,0" />
+
+                        <Button Style="{DynamicResource UpdateButton}" Click="UpdateSpendingButton_Click" Margin="20,0,0,0">
+                            <materialDesign:PackIcon Kind="Cog" Width="32" Height="32" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Button>
+
+
+                        <Button Style="{DynamicResource DefaultButtonSmall}"  Click="DeleteSpendingButton_Click" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <TextBox Style="{DynamicResource DefaultTextBox}" x:Name="SearchSpendingTextBox" Margin="10,475,0,42" HorizontalAlignment="Left"/>
+        <Button Style="{DynamicResource UpdateButton}" HorizontalAlignment="Left" Margin="220,475,0,0" VerticalAlignment="Top" Click="SearchSpendingButton_Click">
+            <materialDesign:PackIcon Kind="Search" Width="32" Height="32" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Button>
+        <ComboBox Style="{DynamicResource DefaultComboBox}" x:Name="SpendingCategoryComboBoxFilter" Margin="290,483,0,0" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <ComboBoxItem Content="{DynamicResource pieItem1}" />
+            <ComboBoxItem Content="{DynamicResource pieItem2}" />
+            <ComboBoxItem Content="{DynamicResource pieItem3}" />
+            <ComboBoxItem Content="{DynamicResource pieItem4}" />
+            <ComboBoxItem Content="{DynamicResource pieItem5}" />
+            <ComboBoxItem Content="{DynamicResource pieItem6}" />
+            <ComboBoxItem Content="{DynamicResource pieItem7}" />
+        </ComboBox>
+        <Button Style="{DynamicResource UpdateButton}" HorizontalAlignment="Left" Margin="500,475,0,0" VerticalAlignment="Top" Click="FilterSpendingButton_Click">
+            <materialDesign:PackIcon Kind="Filter" Width="32" Height="32" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Button>
+
+    </Grid>
+</UserControl>

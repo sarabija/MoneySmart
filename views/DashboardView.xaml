@@ -1,0 +1,89 @@
+﻿<UserControl x:Class="HCI_PROJEKA_1.DashboardView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             Height="460" Width="575" >
+
+    <Grid Margin="0,0,-26,-28">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="93*"/>
+            <RowDefinition Height="395*"/>
+        </Grid.RowDefinitions>
+
+
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Margin="390,-1,0,0" Grid.RowSpan="2">
+            <TextBlock Style="{DynamicResource DashboardTitles}" Text="{DynamicResource BalanceTitle}"/>
+
+            <StackPanel Orientation="Vertical" Margin="10,10,0,20">
+                <TextBlock Style="{DynamicResource BalanceInfo}" Text="{DynamicResource CashLabel}"/>
+                <TextBlock Style="{DynamicResource BalanceValues}" Text="{Binding CurrentBalance.Cash, StringFormat='KM {0:F2}'}"/>
+
+
+                <TextBlock Style="{DynamicResource BalanceInfo}" Text="{DynamicResource CreditLabel}"/>
+                <TextBlock Style="{DynamicResource BalanceValues}" Text="{Binding CurrentBalance.Credit, StringFormat='KM {0:F2}'}"/>
+            </StackPanel>
+        </StackPanel>
+
+
+        <TextBlock Style="{DynamicResource DashboardTitles}" Text="{DynamicResource SpendingDistributionTitle}" Margin="117,-1,0,21" Grid.RowSpan="2"/>
+
+
+        <lvc:PieChart x:Name="Chart" LegendLocation="Right" DataClick="PieChart_DataClick" 
+              Margin="-35,28,336,265" DataHover="PieChart_DataHover"
+              MouseLeave="PieChart_MouseLeave"
+              Width="300" Grid.RowSpan="2">
+            <lvc:PieChart.Series>
+                <lvc:PieSeries Style="{DynamicResource pieItem1Style}" Title="{DynamicResource pieItem1}" Values="30"/>
+                <lvc:PieSeries Style="{DynamicResource pieItem2Style}" Title="{DynamicResource pieItem2}" Values="30"/>
+                <lvc:PieSeries Style="{DynamicResource pieItem3Style}" Title="{DynamicResource pieItem3}" Values="5"/>
+                <lvc:PieSeries Style="{DynamicResource pieItem4Style}" Title="{DynamicResource pieItem4}" Values="10"/>
+                <lvc:PieSeries Style="{DynamicResource pieItem5Style}" Title="{DynamicResource pieItem5}" Values="5"/>
+                <lvc:PieSeries Style="{DynamicResource pieItem6Style}" Title="{DynamicResource pieItem6}" Values="10"/>
+                <lvc:PieSeries Style="{DynamicResource pieItem7Style}" Title="{DynamicResource pieItem7}" Values="10"/>
+            </lvc:PieChart.Series>
+        </lvc:PieChart>
+
+
+        <TextBlock Style="{DynamicResource DashboardTitles}" Text="{DynamicResource MonthlyIncomeDistributionTitle}" Margin="328,135,0,-30" Grid.Row="1"/>
+
+
+        <lvc:CartesianChart x:Name="IncomeChart" Margin="280,187,22,-24" Grid.Row="1">
+            <lvc:CartesianChart.Series>
+                <lvc:ColumnSeries Style="{DynamicResource ColumnSeriesStyle1}" Title="Monthly Revenue" Values="{Binding GetRevenueByMonth}" />
+            </lvc:CartesianChart.Series>
+
+            <lvc:CartesianChart.AxisX>
+                <lvc:Axis Title="{DynamicResource chartMonth}" Labels="{DynamicResource chartLabels}" />
+            </lvc:CartesianChart.AxisX>
+
+            <lvc:CartesianChart.AxisY>
+                <lvc:Axis Title="{DynamicResource chartIncome}" MinValue="0" MaxValue="10000" Unit="100" />
+            </lvc:CartesianChart.AxisY>
+        </lvc:CartesianChart>
+
+
+
+        <TextBlock Style="{DynamicResource DashboardTitles}" Text="{DynamicResource SavingsProgressionTitle}" Margin="109,135,0,222" Grid.Row="1" />
+
+        <StackPanel Margin="-35,151,360,0" VerticalAlignment="Top" Height="254" Grid.Row="1">
+            <TextBlock Style="{DynamicResource GoalTextStyle}" x:Name="Goal1TextBlock" Text="{Binding TopGoals[0].SavingName}"/>
+            <ProgressBar Style="{DynamicResource GoalProgressBarStyle1}" x:Name="Goal1ProgressBar" 
+                 Value="{Binding TopGoals[0].Percentage, Mode=OneWay}" Maximum="{Binding TopGoals[0].SavingsGoal}"/>
+
+            <TextBlock Style="{DynamicResource GoalTextStyle}" x:Name="Goal2TextBlock" Text="{Binding TopGoals[1].SavingName}"/>
+            <ProgressBar Style="{DynamicResource GoalProgressBarStyle2}" x:Name="Goal2ProgressBar" 
+                 Value="{Binding TopGoals[1].Percentage, Mode=OneWay}" Maximum="{Binding TopGoals[1].SavingsGoal}"/>
+
+            <TextBlock Style="{DynamicResource GoalTextStyle}" x:Name="Goal3TextBlock" Text="{Binding TopGoals[2].SavingName}"/>
+            <ProgressBar Style="{DynamicResource GoalProgressBarStyle3}" x:Name="Goal3ProgressBar" 
+                 Value="{Binding TopGoals[2].Percentage, Mode=OneWay}" Maximum="{Binding TopGoals[2].SavingsGoal}"/>
+
+            <TextBlock Style="{DynamicResource GoalTextStyle}" x:Name="Goal4TextBlock" Text="{Binding TopGoals[3].SavingName}"/>
+            <ProgressBar Style="{DynamicResource GoalProgressBarStyle4}" x:Name="Goal4ProgressBar" 
+                 Value="{Binding TopGoals[3].Percentage, Mode=OneWay}" Maximum="{Binding TopGoals[3].SavingsGoal}"/>
+        </StackPanel>
+
+
+    </Grid>
+</UserControl>
